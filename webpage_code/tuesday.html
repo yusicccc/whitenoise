@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The Tuesday Boys</title>
+	<link rel="stylesheet" type="text/css" href="css/tuesday.css">
+	<link rel="stylesheet" type="text/css" href="css/audioplayer.css">
+	<script src="js/jquery-migrate-1.1.1.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/tuesday_script.js"></script>
+</head>
+<body ondragstart="return false;" ondrop="return false;">
+	<div id="splash">
+		<div>
+			<span><p id="splashlogo">The Tuesday Boys</p></span>
+			<br><br><br><br><br>
+			<p id="splashtext">chill, relax, focus</p>
+		</div>
+	</div>
+		
+	<div class="bg">
+		<div class="bgfilter"></div>
+	</div>
+
+	<div id="mainlogo"><div>Tuesday</div></div>
+
+	<div class="ocarousel" data-ocarousel-wrapearly="4" data-ocarousel-period="Infinity" data-ocarousel-perscroll="5">
+	    
+
+	    <div class="ocarousel_window">
+	    	<div id="coffee">
+	    		<div class="icon">
+	    			<img src="icon/coffee.png" alt="coffee" />
+	    			<img class="pauseicon" src="icon/icon_pause.png" alt="pause" />
+	    			<p class="sound">LIB COFFEE</p>
+	    		</div>
+	    		<div class="wrapper">
+	    			<audio preload="none" controls loop>
+	    				<source src="whitenoise/libcoffee.wav" />
+	    			</audio>
+	    		</div>
+	    	</div>
+
+	    	<div id="drop">
+	    		<div class="icon">
+	    			<img src="icon/drop.png" alt="drop" />
+	    			<img class="pauseicon" src="icon/icon_pause.png" alt="pause" />
+	    			<p class="sound">DROP</p>
+	    		</div>
+	    		<div class="wrapper">
+	    			<audio preload="none" controls loop>
+	    				<source src="whitenoise/drop.wav" />
+	    			</audio>
+	    		</div>
+	    	</div>
+
+	    	<div id="wind">
+	    		<div class="icon">
+	    			<img src="icon/wind.png" alt="wind" />
+	    			<img class="pauseicon" src="icon/icon_pause.png" alt="pause" />
+	    			<p class="sound">WIND</p>
+	    		</div>
+	    		<div class="wrapper">
+	    			<audio preload="none" controls loop>
+	    				<source src="whitenoise/wind.wav" />
+	    			</audio>
+	    		</div>
+	    	</div>
+
+	    	<div id="sweep">
+	    		<div class="icon">
+	    			<img src="icon/sweep.png" alt="sweep" />
+	    			<img class="pauseicon" src="icon/icon_pause.png" alt="pause" />
+	    			<p class="sound">SWEEP</p>
+	    		</div>
+	    		<div class="wrapper">
+	    			<audio preload="none" controls loop>
+	    				<source src="whitenoise/sweep.wav" />
+	    			</audio>
+	    		</div>
+	    	</div>
+
+	    	<div id="whitenoise">
+	    		<div class="icon">
+	    			<img src="icon/whitenoise.png" alt="whitenoise" />
+	    			<img class="pauseicon" src="icon/icon_pause.png" alt="pause" />
+	    			<p class="sound">WHITE NOISE</p>
+	    		</div>
+	    		<div class="wrapper">
+	    			<audio preload="none" controls loop>
+	    				<source src="whitenoise/whitenoise.wav" />
+	    			</audio>
+	    		</div>
+	    	</div>
+
+	    </div>
+	</div>
+
+	<footer>
+		<div id="copyrights"><p>Copyright &copy;2017 The Tuesday Boys.</p></div>
+	</footer>
+	<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>
+</body>
+</html>

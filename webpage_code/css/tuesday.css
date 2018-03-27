@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+/* UNIVERSAL */
+
+	* {
+		font-family: 'Avnier', sans-serif;
+		font-size: 13px;
+		color: #fff;
+		-webkit-user-select: none; /* Safari, Chrome */
+		-khtml-user-select: none; /* Konqueror */
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE */
+		user-select: none; /* CSS3 */
+		}
+
+	html {
+		background-color: #000;
+		}
+		
+	#relax {
+		font-size: 24px;
+		color: #ffffff;
+		letter-spacing: 1px;
+		}
+		
+	h2 {
+		font-size: 16px;
+		color: #ffffff;
+		letter-spacing: 1px;
+		}
+		
+	p {
+		font-size: 13px;
+		color: #ffffff;
+		letter-spacing: 0;
+		}
+		
+	a {
+		outline: none;
+		border: 0;
+		}
+		
+	body {
+		overflow: hidden;
+	}
+
+	html, body, div, h1, h2, h3, h4, h5, h6, ul, ol,
+	dl, li, dt, dd, p, blockquote, pre, form, fieldset,
+	table, th, td { 
+		margin: 0; 
+		padding: 0; 
+	} 
+	
+/* END UNIVERSAL */
+
+/* BODY */
+
+	/* SPLASH */
+			
+	#splash {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: #000;
+		z-index: 1000;
+		margin-top: -40px;
+		animation: splash 5s ease forwards;
+		-webkit-animation: splash 5s ease forwards;
+		}
+		
+		#splash div {
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			margin: auto;
+			width: 50%;
+			height: 20%;
+			}
+		
+		#splash span {
+			overflow: hidden;
+			display: block;
+			height: 48px;
+			}
+		
+			#splash p {
+				display: block;
+				overflow: hidden;
+				position: relative;
+				margin: auto;
+				left:0; right: 0;
+				font-size: 48px;
+				text-align: center;
+				vertical-align: middle;
+				opacity: 0;
+				}
+				
+			#splashtext {
+				letter-spacing: 5px;
+				animation: splashtext 1s ease forwards;
+				-webkit-animation: splashtext 1s ease forwards;
+				}
+				
+			#splashlogo {
+				letter-spacing: 16px;
+				animation: splashlogo 2s ease 1.5s forwards;
+				-webkit-animation: splashlogo 2s ease 1.5s forwards;
+				}
+				
+			.splashout {
+				animation: splashout 1s ease forwards;
+				-webkit-animation: splashout 1s ease forwards;
+				}
+				
+			/* SPLASH ANIMATION */
+				
+				/* SPLASH */
+				@keyframes splash {
+					0% {opacity: 1;}
+					80% {opacity: 1;}
+					99% {opacity: 0;}
+					100%{opacity: 0; display: none;}
+					}
+				@-webkit-keyframes splash {
+					0% {opacity: 1;}
+					80% {opacity: 1;}
+					99% {opacity: 0;}
+					100% {opacity: 0; display: none;}
+					}
+				
+				/* SPLASHTEXT */
+				@keyframes splashtext {
+					0% {opacity: 0;}
+					100% {opacity: 1;}
+					}
+				@-webkit-keyframes splashtext {
+					0% {opacity: 0;}
+					100% {opacity: 1;}
+					}
+				
+				/* SPLASHLOGO */
+				@keyframes splashlogo {
+					0% {opacity: 0;}
+					50% {opacity: 1; transform: translate3d(0, 0, 0);}
+					100% {opacity: 1; transform: translate3d(0, 14px, 0);}
+					}
+				@-webkit-keyframes splashlogo {
+					0% {opacity: 0;}
+					50% {opacity: 1; -webkit-transform: translate3d(0, 0, 0);}
+					100% {opacity: 1; -webkit-transform: translate3d(0, 14px, 0);}
+					}
+
+			/* END SPLASH ANIMATION */
+		
+
+	/* END SPLASH */
+	
+	/* BACKGROUND */
+
+	.bg {
+		background-image: url('../bg/sunset.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -100;
+		margin-top: -40px;
+		transform: translateZ(0);
+		-webkit-transform: translateZ(0);
+		}
+		
+		.bgfilter {
+			height: 100%;
+			width: 100%;
+			box-shadow: inset 0 0 400px #000;
+			-moz-box-shadow: inset 0 0 400px #000;
+			-webkit-box-shadow: inset 0 0 400px #000;
+			}
+		
+	/* END BACKGROUND */
+	
+	/* MAIN LOGO */
+
+	#mainlogo {
+		height: 24px;
+		margin-left:100px;
+		margin-top: 40px;
+		width: 190px;
+		overflow: hidden;
+	}
+
+		#mainlogo div {
+			z-index: 200;
+			position: relative;
+			font-size: 24px;
+			letter-spacing: 6px;
+			top: 6px;
+			}
+	
+	/* END MAIN LOGO */
+			
+	/* OPEN CAROUSEL */
+
+
+	/**************************************
+	jQuery Open Carousel
+
+	Copyright (c) 2013 Justin McCandless (justinmccandless.com)
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of 
+	this software and associated documentation files (the "Software"), to deal in the 
+	Software without restriction, including without limitation the rights to use, copy, 
+	modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, 
+	and to permit persons to whom the Software is furnished to do so, subject to the 
+	following conditions:
+
+	The above copyright notice and this permission notice shall be included in all 
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+	INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR 
+	PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+	LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+	TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
+	OR OTHER DEALINGS IN THE SOFTWARE.
+	***************************************/
+
+	.ocarousel {
+		width: 952px;
+		margin: auto;
+		display: block;
+		}
+
+		.ocarousel_window {
+			overflow: hidden;
+			white-space: nowrap;
+			width: 900px;
+			height: 180px;
+			margin-top: 20%;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			
+			.ocarousel_window_slides {
+				position: relative;
+				margin: 0 auto;
+				overflow: hidden;
+				width: 50000px;
+				white-space: nowrap;
+			}
+			
+				.ocarousel_window_slides div {
+					text-decoration: none;
+					text-align: center;
+					height: 180px;
+					color: black;
+					display: inline-block;
+				}
+			
+				.ocarousel_window_slides>* {
+					float: left;
+					white-space: normal;
+				}
+			
+	/* END OPEN CAROUSEL */
+
+	/* SCROLL BUTTONS */
+			
+	.soundscroll {
+		position: absolute;
+		background-color: #2D2D2D;
+		width: 26px;
+		height: 180px;
+		color: transparent;
+		}
+			
+		.soundscroll:hover {
+			background-color: #3e3e3e;
+			}
+			
+		.soundscroll img {
+			background: transparent;
+			margin: 68px 8px 8px 8px;
+			position: relative;
+			}
+			
+		
+	/* END SCROLL BUTTONS */
+		
+/* END BODY */
+	
+/* FOOTER */
+		
+	footer {
+		position: absolute;
+		bottom: 16px;
+		width: 100%;
+		z-index: -1;
+		}
+		
+		footer p {
+			text-align: center;
+			white-space: nowrap;
+			width: 952px;
+			margin: auto;
+			}
+			
+/* END FOOTER */
+
+/* ANIMATIONS */
+
+	/* ICON DROP */
+	
+		.ocarousel_window div div:hover  img{
+			animation: icondrop .25s ease forwards;
+			-webkit-animation: icondrop .25s ease forwards;
+			}
+			
+		.ocarousel_window div div:hover p {
+			animation: fadeout .25s ease forwards;
+			-webkit-animation: fadeout .25s ease forwards;
+			}
+			
+		@keyframes icondrop {
+			100% {transform: translate3d(0, 10px, 0);}
+			}
+		@-webkit-keyframes icondrop {
+			100% {-webkit-transform: translate3d(0, 10px, 0);}
+			}
+
+			/* ICON DROP REVERSE */
+			@keyframes icondropreverse {
+				0% {transform: translate3d(0, 10px, 0);}
+				}
+			@-webkit-keyframes icondropreverse {
+				0% {-webkit-transform: translate3d(0, 10px, 0);}
+				}
+				
+	/* END ICON DROP */
+	
+	/* FADE OUT */
+		@keyframes fadeout {
+			100% {opacity: 0;}
+			}
+		@-webkit-keyframes fadeout {
+			100% {opacity: 0;}
+			}
+			
+	/* FADE IN */
+		@keyframes fadein {
+			0% {opacity: 0;}
+			}
+		@-webkit-keyframes fadein {
+			0% {opacity: 0;}
+			}
+	
+/* END ANIMATIONS */
